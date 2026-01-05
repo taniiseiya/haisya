@@ -1,0 +1,2172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>〖公式〗スマイルクリニック｜石川の矯正歯科</title>
+  <meta name="description" content="石川の矯正歯科専門医院。ネット予約可。平日夜19:30まで、土日も診療。" />
+  <style>
+    :root{
+      --cream:#fbf6ef;
+      --paper:#fffdf9;
+      --line:#e9ded3;
+      --text:#6b5b4d;
+      --muted:#9a8a7c;
+      --green:#8fc56a;
+      --green2:#7bbf57;
+      --yellow:#f6c45b;
+      --pink:#d9b0b0;
+      --brown:#c79757;
+      --shadow: 0 12px 30px rgba(0,0,0,.12);
+      --shadow2: 0 20px 38px rgba(0,0,0,.14);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1200px;
+      --topbar-h: 96px;
+      --hero-h: 90vh;
+      --font: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic Medium", "YuGothic", "Meiryo", "游ゴシック体", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      width:100%;
+      overflow-x:hidden;
+    }
+    body{
+      font-family:var(--font);
+      color:var(--text);
+      background:#FFFFFF;
+    }
+    a{color:inherit}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    .section{
+      padding:100px 0;
+      background:#FFFFFF;
+      position:relative;
+      margin-top:0;
+    }
+    .section.alt{
+      background:var(--cream);
+      position:relative;
+      margin-top:0;
+    }
+    /* セクション間の大きな余白と区切り */
+    .section + .section,
+    .section.alt + .section,
+    .section + .section.alt,
+    .section.alt + .section.alt{
+      margin-top:0;
+      padding-top:120px;
+      position:relative;
+    }
+    /* セクション間の明確な区切り線（参考サイト風） */
+    .section::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:1px;
+      background:var(--line);
+      opacity:0.4;
+    }
+    .section.alt::before{
+      background:rgba(143,197,106,.2);
+    }
+    /* 最初のセクションには区切り線を表示しない */
+    .section:first-of-type::before,
+    .section.alt:first-of-type::before{
+      display:none;
+    }
+    /* セクションのコンテンツを前面に */
+    .section > .wrap,
+    .section.alt > .wrap{
+      position:relative;
+      z-index:1;
+    }
+    .kicker{font-size:12px; letter-spacing:.18em; color:#9a8a7c; font-weight:600; text-transform:uppercase;}
+    .h2{margin:10px 0 18px; font-size:30px; letter-spacing:.06em; font-weight:700; line-height:1.4;}
+    .sub{margin:0 0 22px; color:#8c7c6f; line-height:1.8; font-size:15px;}
+
+    /* ====== Header ====== */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:saturate(1.2) blur(8px);
+      border-bottom:1px solid rgba(233,222,211,.3);
+    }
+    .topbarInner{
+      height:var(--topbar-h);
+      display:flex; align-items:center; gap:18px;
+      padding:14px 0;
+      flex-direction:row;
+    }
+
+    .brand{display:flex; align-items:center; gap:12px; min-width: 320px; flex-shrink:1; overflow:hidden;}
+    .brand img{
+      width:54px;
+      height:54px;
+      object-fit:contain;
+      background:transparent;
+      display:block;
+      flex-shrink:0;
+    }
+    .logoMark{
+      width:54px; height:54px; border-radius:50%;
+      background:
+        radial-gradient(circle at 30% 30%, #fff 0 40%, transparent 41%),
+        radial-gradient(circle at 70% 30%, #fff 0 40%, transparent 41%),
+        linear-gradient(145deg, #f3c4c4, #dff1c7);
+      border:2px solid #e6d7cc;
+      box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    }
+    .brandText{flex:1; min-width:0; overflow:hidden;}
+    .brandText small{display:block; font-size:11px; letter-spacing:.1em; color:var(--muted); margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:500;}
+    .brandText strong{display:block; font-size:22px; letter-spacing:.05em; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:1.3;}
+    .brandText .latin{margin-top:4px; font-size:11px; letter-spacing:.2em; color:#9a8a7c; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+    .topNav{display:flex; gap:14px; align-items:flex-end; flex:1; padding-bottom:4px;}
+    .topNav a{text-decoration:none; color:var(--text); font-size:14px; padding:10px 12px; border-radius:999px; transition:.2s; white-space:nowrap; font-weight:500;}
+    .topNav a:hover{background:rgba(143,197,106,.1); color:var(--green2);}
+
+    .rightHead{display:flex; align-items:center; gap:14px;}
+
+    .pillBtn{
+      border:0; padding:14px 24px; border-radius:999px; font-weight:600; color:#fff;
+      cursor:pointer; display:flex; align-items:center; gap:10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.12);
+      letter-spacing:.05em; white-space:nowrap;
+      transition: all 0.2s ease;
+    }
+    .pillBtn:hover{
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      transform: translateY(-1px);
+    }
+    .pillBtn svg{width:18px;height:18px;opacity:.95}
+    .pillBtn.green{background:linear-gradient(180deg,var(--green),var(--green2))}
+    .pillBtn.yellow{background:linear-gradient(180deg,var(--yellow),#f0b84a)}
+
+    /* ====== Mobile header ====== */
+    .hamburger{display:none; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.75); border-radius:14px; padding:10px 12px; cursor:pointer;}
+    .hamburger span{display:block; width:18px; height:2px; background:#8c7c6f; margin:4px 0; border-radius:2px;}
+
+    .drawerBackdrop{position:fixed; inset:0; background:rgba(0,0,0,.25); z-index:90; display:none;}
+    .drawer{position:fixed; left:0; top:0; height:100%; width:min(360px, 92vw); background:rgba(255,255,255,.92);
+      border-right:1px solid rgba(233,222,211,.9); z-index:91; transform:translateX(-105%);
+      transition:.18s; backdrop-filter: blur(10px);
+    }
+    .drawerHeader{display:flex; align-items:center; justify-content:space-between; padding:16px 16px 10px; border-bottom:1px solid rgba(233,222,211,.9)}
+    .drawerHeader strong{letter-spacing:.08em}
+    .drawerClose{width:36px; height:36px; border-radius:12px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.85); cursor:pointer; font-weight:900;}
+    .drawerNav{padding:12px 16px 18px; display:grid; gap:8px;}
+    .drawerNav a{text-decoration:none; padding:12px 12px; border-radius:14px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.75); font-weight:800; letter-spacing:.06em}
+    .drawerNav a:active{transform:translateY(1px)}
+    .drawerCtas{padding:0 16px 18px; display:grid; gap:10px;}
+
+    /* ====== Hero ====== */
+    .hero{
+      position:relative;
+      display:flex;
+      min-height:95vh;
+      height:95vh;
+      overflow:visible;
+      background:#FFFFFF;
+      margin:0;
+      padding:0;
+    }
+
+    /* 左サイドバー */
+    .heroSidebar{
+      width:90px;
+      flex-shrink:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      padding:40px 20px;
+      position:relative;
+      z-index:10;
+    }
+    .heroSidebarText{
+      writing-mode:vertical-rl;
+      text-orientation:upright;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.2em;
+      color:#6F5E53;
+      margin-top:40px;
+    }
+    .heroSidebarScroll{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      margin-bottom:40px;
+    }
+    .heroSidebarScrollText{
+      writing-mode:vertical-rl;
+      text-orientation:upright;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.3em;
+      color:#8A7A6B;
+    }
+    .heroSidebarScrollLine{
+      width:1px;
+      height:60px;
+      background:linear-gradient(180deg, #6F5E53 0%, transparent 100%);
+      position:relative;
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    .heroSidebarScrollLine::after{
+      content:"";
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:4px;
+      height:20px;
+      background:#6F5E53;
+      border-radius:2px;
+      animation: scrollDot 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine{
+      0%, 100%{opacity:0.3;}
+      50%{opacity:1;}
+    }
+    @keyframes scrollDot{
+      0%{top:0; opacity:1;}
+      100%{top:40px; opacity:0;}
+    }
+
+    /* メインビジュアルエリア */
+    .heroMain{
+      flex:1;
+      position:relative;
+      margin:20px 0 20px 0;
+      border-radius:40px;
+      border-top-right-radius:0;
+      border-bottom-right-radius:0;
+      overflow:hidden;
+      background:rgba(255,255,255,.95);
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+    }
+    .heroPhoto{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      width:100%;
+      height:100%;
+    }
+    .heroPhoto img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center center;
+    }
+    /* グラデーションマスク（可読性確保） */
+    .heroGradient{
+      position:absolute;
+      inset:0;
+      z-index:2;
+      background:
+        linear-gradient(180deg, rgba(249,248,244,.4) 0%, rgba(249,248,244,.2) 30%, transparent 60%),
+        linear-gradient(90deg, rgba(249,248,244,.5) 0%, rgba(249,248,244,.2) 25%, transparent 50%);
+      pointer-events:none;
+    }
+
+
+    /* 控えめな装飾要素（桜の花びらを削減） */
+    .petals{position:absolute; inset:0; z-index:5; pointer-events:none; overflow:hidden; opacity:0.3;}
+    .petal{
+      position:absolute;
+      width:12px;
+      height:12px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,192,203,.6), rgba(255,182,193,.4), transparent);
+      border-radius: 50% 0 50% 50%;
+      transform: rotate(45deg);
+      filter: drop-shadow(0 2px 4px rgba(255,182,193,.2));
+      animation: sakuraFall 20s linear infinite;
+      opacity:.4;
+      will-change: transform;
+    }
+    /* 左側エリアの装飾パーツ（控えめに） */
+    .decorParticles{
+      position:absolute;
+      inset:0;
+      z-index:2;
+      pointer-events:none;
+      overflow:hidden;
+      opacity:0.4;
+    }
+    .particle{
+      position:absolute;
+      border-radius:50%;
+      background: radial-gradient(circle, rgba(255,248,240,.3), transparent);
+      will-change: transform;
+      filter: blur(100px);
+      mix-blend-mode: normal;
+      opacity:0.3;
+    }
+    .particle.p1{width:120px; height:120px; left:15%; top:25%; animation: float1 30s ease-in-out infinite;}
+    .particle.p2{width:80px; height:80px; left:25%; top:65%; animation: float2 35s ease-in-out infinite;}
+    .particle.p3{display:none;}
+    @keyframes float1{
+      0%, 100%{transform:translate(0, 0) scale(1);}
+      50%{transform:translate(30px, -40px) scale(1.1);}
+    }
+    @keyframes float2{
+      0%, 100%{transform:translate(0, 0) scale(1);}
+      50%{transform:translate(-25px, 35px) scale(0.9);}
+    }
+    @keyframes float3{
+      0%, 100%{transform:translate(0, 0) scale(1);}
+      50%{transform:translate(40px, 20px) scale(1.05);}
+    }
+    @keyframes float4{
+      0%, 100%{transform:translate(0, 0) scale(1);}
+      50%{transform:translate(-30px, -30px) scale(0.95);}
+    }
+    @keyframes float5{
+      0%, 100%{transform:translate(0, 0) scale(1);}
+      50%{transform:translate(20px, 45px) scale(1.08);}
+    }
+    .petal::before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:100%;
+      background: radial-gradient(circle at 70% 70%, rgba(255,240,245,.6), transparent 60%);
+      border-radius: inherit;
+    }
+    .petal:nth-child(1){left:12%; animation-duration:22s; animation-delay:-2s; transform:rotate(25deg) scale(0.8);}
+    .petal:nth-child(2){left:28%; animation-duration:24s; animation-delay:-5s; transform:rotate(-15deg) scale(0.9);}
+    .petal:nth-child(3){left:45%; animation-duration:20s; animation-delay:-1s; transform:rotate(35deg) scale(0.75);}
+    .petal:nth-child(4){left:62%; animation-duration:23s; animation-delay:-4s; transform:rotate(-25deg) scale(0.85);}
+    .petal:nth-child(5){display:none;}
+    .petal:nth-child(6){display:none;}
+    @keyframes sakuraFall{
+      0%{
+        top:-20px;
+        transform: translateY(0) translateX(0) rotate(var(--rotate, 0deg)) scale(var(--scale, 1));
+        opacity:0.8;
+      }
+      20%{
+        opacity:0.9;
+        transform: translateY(20vh) translateX(15px) rotate(calc(var(--rotate, 0deg) + 90deg)) scale(var(--scale, 1));
+      }
+      50%{
+        transform: translateY(50vh) translateX(-20px) rotate(calc(var(--rotate, 0deg) + 180deg)) scale(var(--scale, 1));
+        opacity:0.7;
+      }
+      80%{
+        transform: translateY(80vh) translateX(25px) rotate(calc(var(--rotate, 0deg) + 270deg)) scale(var(--scale, 1));
+        opacity:0.6;
+      }
+      100%{
+        top:110%;
+        transform: translateY(100vh) translateX(-15px) rotate(calc(var(--rotate, 0deg) + 360deg)) scale(var(--scale, 1));
+        opacity:0.3;
+      }
+    }
+
+    .heroInner{
+      position:absolute;
+      inset:0;
+      z-index:3;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:60px 80px;
+      pointer-events:none;
+    }
+
+    /* 左側コンテンツコンテナ */
+    .copyContainer{
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+      max-width:600px;
+      pointer-events:auto;
+    }
+
+    .copy{
+      opacity:0;
+      animation: slideInLeft 0.8s ease-out 0.5s forwards;
+      position:relative;
+      z-index:4;
+    }
+    /* 左側背景の控えめなあしらい */
+    .copy::before{
+      content:"";
+      position:absolute;
+      left:-40px;
+      top:15%;
+      width:300px;
+      height:300px;
+      background: radial-gradient(
+        ellipse at 40% 35%,
+        rgba(217,176,176,.04) 0%,
+        rgba(217,176,176,.02) 30%,
+        transparent 60%
+      );
+      border-radius:50%;
+      z-index:-1;
+      pointer-events:none;
+      filter: blur(40px);
+      opacity:0.6;
+    }
+    .copy::after{
+      display:none;
+    }
+    .copy .headline{
+      font-weight:700;
+      line-height:1.5; 
+      letter-spacing:.04em;
+      font-feature-settings: "palt";
+      -webkit-font-feature-settings: "palt";
+      text-shadow: none;
+    }
+    .copy .headline > span:first-child,
+    .copy .headline > span:nth-child(2){
+      display:block;
+      font-size:1.4rem;
+      font-weight:600;
+      color:var(--text);
+      margin-top:8px;
+      letter-spacing:.05em;
+      line-height:1.5;
+    }
+    .copy .headline > span:last-child{
+      display:inline-block;
+      font-size:3.2rem;
+      font-weight:700;
+      color:var(--text);
+      line-height:1.3;
+      margin-top:12px;
+      white-space:nowrap;
+      letter-spacing:.04em;
+    }
+    .copy{
+      position:relative;
+      padding-left:0;
+    }
+    .copy .script{
+      position:absolute;
+      left:-100px;
+      top:50%;
+      transform:translateY(-50%);
+      margin-top:0;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝体", serif;
+      font-size:360px;
+      line-height:1;
+      color: rgba(233,222,211,.02);
+      text-transform: none;
+      letter-spacing:0;
+      font-weight:300;
+      user-select:none;
+      z-index:-1;
+      white-space:nowrap;
+      pointer-events:none;
+      overflow:visible;
+    }
+    @keyframes slideInLeft{
+      from{opacity:0; transform:translateX(-30px);}
+      to{opacity:1; transform:translateX(0);}
+    }
+    
+    /* ====== 当院の特徴（強み） ====== */
+    .features{
+      display:flex;
+      flex-direction:row;
+      gap:24px;
+      margin-top:40px;
+      padding-top:40px;
+      border-top:1px solid rgba(233,222,211,.4);
+      flex-wrap:wrap;
+    }
+    .feature-point{
+      flex:1;
+      min-width:140px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      opacity:0;
+      animation: featurePopIn 0.6s ease-out var(--delay, 0.8s) forwards;
+    }
+    @keyframes featurePopIn{
+      0%{
+        opacity:0;
+        transform:translateY(20px) scale(0.9);
+      }
+      50%{
+        transform:translateY(-8px) scale(1.05);
+      }
+      100%{
+        opacity:1;
+        transform:translateY(0) scale(1);
+      }
+    }
+    .feature-icon{
+      width:48px;
+      height:48px;
+      min-width:48px;
+      border-radius:12px;
+      background: rgba(255,255,255,.5);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:rgba(199,151,87,1);
+      flex-shrink:0;
+    }
+    .feature-icon svg{
+      width:24px;
+      height:24px;
+      stroke:rgba(199,151,87,1);
+      fill:none;
+    }
+    .feature-text{
+      flex:1;
+    }
+    .feature-label{
+      display:block;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.12em;
+      color:var(--text);
+      margin-bottom:4px;
+      opacity:.8;
+    }
+    .feature-desc{
+      font-size:12px;
+      line-height:1.5;
+      color:#888;
+      margin:0;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    /* ====== 診療時間表 ====== */
+    .hoursTable{
+      background:#FFFFFF;
+      border:1px solid rgba(233,222,211,.3);
+      border-radius:16px;
+      padding:24px;
+      margin-top:0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      pointer-events:auto;
+      z-index:4;
+      position:relative; 
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+    .hoursTable table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:280px;
+    }
+    .hoursTable th,
+    .hoursTable td{
+      padding:14px 12px;
+      text-align:center;
+      font-size:14px;
+      font-weight:700;
+      color:#6F5E53;
+      border-bottom:1px solid rgba(233,222,211,.3);
+    }
+    .hoursTable th:first-child,
+    .hoursTable td:first-child{
+      text-align:left;
+      font-weight:900;
+      background:rgba(251, 246, 239, .85);
+    }
+    .hoursTable tr:last-child th,
+    .hoursTable tr:last-child td{
+      border-bottom:none;
+    }
+    .hoursTable th{
+      background:rgba(251, 246, 239, .85);
+      border-bottom:2px solid rgba(233,222,211,.4);
+    }
+    .hoursTableMark{
+      font-size:16px;
+      color:#6F5E53;
+      font-weight:900;
+    }
+
+    .rightFloat{
+      position:absolute;
+      bottom:60px;
+      right:80px;
+      width:min(430px, 100%);
+      z-index:4;
+      opacity:0;
+      animation: slideUpFade 0.8s ease-out 0.7s forwards;
+      pointer-events:auto;
+    }
+    @keyframes slideUpFade{
+      from{opacity:0; transform:translateY(30px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+    .glassCard{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(233,222,211,.4);
+      border-radius: var(--radius2);
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+      padding:20px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .badgeInfo{
+      position:absolute; 
+      right: 18px; 
+      top: -28px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.8);
+      border-radius: 12px;
+      padding:10px 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+      font-weight:900;
+      text-align:center; 
+      line-height:1.4;
+      z-index:10;
+      font-size:13px;
+      color:var(--text);
+      letter-spacing:.05em;
+    }
+    .stack{margin-top: 10px; display:grid; gap:12px;}
+
+    .cta{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.4);
+      background: rgba(255,255,255,.82);
+      text-decoration:none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .cta:hover{
+      box-shadow: 0 12px 28px rgba(0,0,0,.1);
+      transform:translateY(-2px);
+      background: rgba(255,255,255,.9);
+    }
+    .cta .left{display:flex; align-items:center; gap:12px;}
+    .ico{width:40px;height:40px; border-radius:12px; display:grid; place-items:center;
+      box-shadow: 0 10px 18px rgba(0,0,0,.08); flex:0 0 auto;}
+    .ico svg{width:20px;height:20px}
+    .cta .txt strong{display:block; font-size:16px; letter-spacing:.05em; font-weight:600}
+    .cta .txt small{display:block; font-size:12px; color:#8c7c6f; margin-top:3px; font-weight:400}
+    .cta .mini{font-size:12px; padding:8px 10px; border-radius:999px; border:1px solid rgba(233,222,211,.9);
+      background:rgba(255,255,255,.8); color:#6b5b4d; font-weight:900; white-space:nowrap;}
+
+    .cta.g1 .ico{background: rgba(143,197,106,.85)}
+    .cta.g2 .ico{background: rgba(246,196,91,.85)}
+    .cta.g3 .ico{background: rgba(217,176,176,.85)}
+    .cta.g4 .ico{background: rgba(199,151,87,.85)}
+
+    /* モバイル/タブレット用の予約メニューボタン */
+    .reservationMenuBtn{
+      display:none;
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      background: linear-gradient(180deg, rgba(159,212,123,.95), rgba(127,191,90,.95));
+      border:none;
+      box-shadow: 0 8px 24px rgba(0,0,0,.15);
+      cursor:pointer;
+      z-index:1000;
+      align-items:center;
+      justify-content:center;
+      transition: all 0.3s ease;
+      pointer-events:auto;
+    }
+    .reservationMenuBtn:hover{
+      transform:scale(1.1);
+      box-shadow: 0 12px 32px rgba(0,0,0,.2);
+    }
+    .reservationMenuBtn svg{
+      width:28px;
+      height:28px;
+      stroke:white;
+    }
+
+    /* 予約ポップアップ */
+    .reservationPopup{
+      display:none;
+      position:fixed;
+      bottom:100px;
+      right:24px;
+      width:min(380px, calc(100vw - 48px));
+      z-index:1001;
+      pointer-events:none;
+    }
+    .reservationPopup.active{
+      display:block;
+      pointer-events:auto;
+    }
+    .reservationPopupContent{
+      position:relative;
+      animation: popupSlideUp 0.3s ease-out;
+    }
+    @keyframes popupSlideUp{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+    .reservationPopupClose{
+      position:absolute;
+      top:-12px;
+      right:-12px;
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      background:#FFFFFF;
+      border:2px solid rgba(233,222,211,.5);
+      color:#6F5E53;
+      font-size:24px;
+      line-height:1;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      transition: all 0.2s ease;
+      z-index:10;
+    }
+    .reservationPopupClose:hover{
+      background:#F9F8F4;
+      transform:scale(1.1);
+    }
+    .reservationPopupBackdrop{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.3);
+      z-index:1000;
+      opacity:0;
+      transition: opacity 0.3s ease;
+      pointer-events:none;
+    }
+    .reservationPopup.active .reservationPopupBackdrop{
+      opacity:1;
+      pointer-events:auto;
+    }
+    .reservationPopup .badgeInfo{
+      position:relative;
+      right:auto;
+      top:auto;
+      margin-bottom:16px;
+    }
+
+    .decor{position:absolute; inset:0; z-index:4; pointer-events:none; opacity:0.5;}
+    .flower{position:absolute; width:200px; height:200px; opacity:.4; filter: drop-shadow(0 6px 12px rgba(0,0,0,.06));
+      background:
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,.6) 0 15%, transparent 16%),
+        radial-gradient(circle at 55% 30%, rgba(255,255,255,.6) 0 12%, transparent 13%),
+        radial-gradient(circle at 68% 52%, rgba(255,255,255,.6) 0 14%, transparent 15%),
+        radial-gradient(circle at 52% 55%, rgba(245,178,178,.3) 0 8%, transparent 9%),
+        radial-gradient(circle at 60% 60%, rgba(174,222,169,.25) 0 8%, transparent 9%);
+      border-radius: 50%;
+      will-change: transform;
+    }
+    .flower.bl{left:-80px; bottom:-100px; transform: rotate(-8deg)}
+    .flower.br{right:-80px; bottom:-100px; transform: rotate(10deg)}
+
+    /* ====== Bottom-left hours widget ====== */
+    .hours{position:fixed; left: 18px; bottom: 18px; z-index:100; width: 240px; border-radius: 12px; overflow:hidden;
+      border:1px solid rgba(233,222,211,.95); background: rgba(255,255,255,.88); box-shadow: 0 16px 26px rgba(0,0,0,.12); font-size:13px;}
+    .hours .h{padding:10px 12px; font-weight:900; background:rgba(255,255,255,.9); display:flex; justify-content:space-between; align-items:center;}
+    .hours .x{width:18px;height:18px; border-radius: 6px; display:grid;place-items:center; background:rgba(233,222,211,.55); color:#7a6a5c; font-weight:900; line-height:1; cursor:pointer}
+    .hours .b{padding:10px 12px 12px; color:#8c7c6f;}
+
+    /* ====== Common cards ====== */
+    .grid{display:grid; gap:18px;}
+    .card{
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(233,222,211,.5);
+      border-radius: var(--radius2);
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      padding:24px;
+      transition: all .2s ease;
+    }
+    .card:hover{box-shadow: 0 4px 12px rgba(0,0,0,.1); border-color:rgba(233,222,211,.7);}
+    .card.soft{background:rgba(255,255,255,.88); box-shadow: 0 2px 6px rgba(0,0,0,.05)}
+
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 18px;
+      border-radius: 999px;
+      border:1px solid rgba(233,222,211,.6);
+      background:rgba(255,255,255,.9);
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:.05em;
+      box-shadow: 0 2px 6px rgba(0,0,0,.08);
+      transition: all 0.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,.12); border-color:rgba(233,222,211,.8);}
+    .btn:active{transform:translateY(0)}
+
+    /* ====== NEWS ====== */
+    .newsWrap{display:flex; flex-direction:column; gap:18px;}
+    .newsList{margin:0; padding:0; list-style:none; display:grid; gap:10px;}
+    .newsItem{display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border-radius: 16px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.7)}
+    .newsItem time{font-weight:900; color:#8c7c6f; font-size:12px; white-space:nowrap; flex-shrink:0;}
+    .tag{font-size:12px; font-weight:900; color:#6b5b4d; background:rgba(143,197,106,.14); border:1px solid rgba(143,197,106,.28); padding:6px 10px; border-radius:999px; white-space:nowrap; flex-shrink:0;}
+    .newsItem a{text-decoration:none; font-weight:900; letter-spacing:.04em; flex:1; min-width:0; word-break:break-word; line-height:1.5;}
+
+    /* ====== CLINIC ====== */
+    .clinicGrid{display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; align-items:stretch;}
+    .infoLine{display:flex; gap:10px; align-items:flex-start; color:#8c7c6f; line-height:1.7}
+    .phone{font-weight:900; letter-spacing:.08em; font-size:20px; margin:10px 0 0}
+    .sns{display:flex; gap:10px; margin-top:12px;}
+    .sns a{display:inline-flex; align-items:center; gap:10px; padding:10px 12px; border-radius:999px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.82); text-decoration:none; font-weight:900}
+
+    .table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius: 16px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.78)}
+    .table th,.table td{padding:12px 10px; border-bottom:1px solid rgba(233,222,211,.7); font-size:13px}
+    .table th{background:rgba(251,246,239,.85); text-align:left; font-weight:900}
+    .table tr:last-child td,.table tr:last-child th{border-bottom:0}
+    .circle{display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%; background:rgba(143,197,106,.18); border:1px solid rgba(143,197,106,.32); font-weight:900; color:#6b5b4d}
+
+    /* ====== CALENDAR ====== */
+    .calendarBox{border-radius: var(--radius2); overflow:hidden; border:1px solid rgba(233,222,211,.9); box-shadow: var(--shadow2); background:#fff}
+    .calendarNotice{color:#8c7c6f; line-height:1.8; margin:0 0 14px}
+    iframe{border:0}
+
+    /* ====== FEATURE ====== */
+    .featureList{display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));}
+    .feature{
+      display:flex;
+      flex-direction:column;
+      padding:0;
+      border-radius: 20px;
+      border:1px solid rgba(233,222,211,.3);
+      background:#FFFFFF;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+      overflow:hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      max-width:100%;
+    }
+    .feature:hover{
+      transform:translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    }
+    /* 上部バナー（参考画像風） */
+    .fThumb{
+      width:100%;
+      height:100px;
+      border-radius:20px 20px 0 0;
+      background: rgba(251,246,239,.6);
+      border:none;
+      box-shadow: none;
+      flex-shrink:0;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-end;
+      padding:12px 24px 16px;
+      position:relative;
+    }
+    .fThumb .fNo{
+      font-weight:500;
+      letter-spacing:.1em;
+      color:#6F5E53;
+      font-size:10px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+      opacity:0.8;
+    }
+    .fThumb .fTitle{
+      position:static;
+      font-size:20px;
+      font-weight:600;
+      letter-spacing:.02em;
+      color:#4A4A4A;
+      line-height:1.4;
+      margin:0;
+      max-width:100%;
+      word-break:keep-all;
+      overflow-wrap:break-word;
+    }
+    /* 下部コンテンツエリア */
+    .feature > div{
+      padding:24px;
+      background:#FFFFFF;
+    }
+    .fText{margin:12px 0 0; color:#8c7c6f; line-height:1.8; font-size:14px;}
+    .fLinks{margin-top:16px; display:flex; flex-wrap:wrap; gap:8px}
+    .fLinks .btn{
+      font-size:11px;
+      padding:6px 12px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:100%;
+      background:rgba(143,197,106,.1);
+      border-color:rgba(143,197,106,.3);
+      color:#6F5E53;
+    }
+    .fLinks .btn:hover{
+      background:rgba(143,197,106,.2);
+    }
+
+    /* ====== MEDICAL ====== */
+    .medicalGrid{display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;}
+
+    /* 画像つきボックス（ユーザーが分かりやすい） */
+    .mCard{
+      border-radius: 22px;
+      border:1px solid rgba(233,222,211,.5);
+      background:rgba(255,255,255,.92);
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      text-decoration:none;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height: 240px;
+      transition: all .2s ease;
+    }
+    .mCard:hover{
+      transform: translateY(-2px); 
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      border-color: rgba(143,197,106,.3);
+    }
+
+    .mThumb{
+      height: 132px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(251,246,239,.5);
+      position:relative;
+      border-bottom:1px solid rgba(233,222,211,.4);
+    }
+    .mIcon{
+      font-size: 56px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+    .mCard:hover .mIcon{
+      transform: scale(1.15);
+    }
+    .mBody{padding:18px 18px 20px; flex:1; display:flex; flex-direction:column;}
+    .mTitle{margin:0; font-weight:600; letter-spacing:.03em; font-size:16px; color:var(--text); line-height:1.4;}
+    .mDesc{margin:10px 0 0; color:#8c7c6f; line-height:1.75; font-size:13px; flex:1;}
+
+
+    /* ====== GREETING ====== */
+    .greet{display:grid; grid-template-columns: 280px 1fr; gap:18px; align-items:start;}
+    .doctorPhoto{width:100%; aspect-ratio: 3/4; border-radius: 26px; border:1px solid rgba(233,222,211,.9);
+      background: linear-gradient(135deg, rgba(217,176,176,.25), rgba(143,197,106,.18)); box-shadow: var(--shadow2);
+      overflow:hidden; position:relative;}
+    .doctorPhoto::after{content:"院長写真（差し替え可）"; position:absolute; left:14px; bottom:14px; font-weight:900; font-size:12px; letter-spacing:.08em; color:#8c7c6f;
+      background:rgba(255,255,255,.85); border:1px solid rgba(233,222,211,.9); padding:8px 10px; border-radius: 999px;}
+    .greet h3{margin:6px 0 6px; font-size:22px; letter-spacing:.04em; font-weight:700; line-height:1.4;}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; border:1px solid rgba(233,222,211,.5);
+      background:rgba(255,255,255,.9); font-weight:600; letter-spacing:.04em; font-size:13px;}
+    .greet p{margin:12px 0 0; color:#8c7c6f; line-height:1.9}
+
+    /* ====== COLUMN ====== */
+    .columnGrid{display:grid; grid-template-columns: repeat(5, 1fr); gap:14px;}
+    .colBox{padding:14px; border-radius: 22px; border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.72); box-shadow: 0 14px 26px rgba(0,0,0,.10)}
+    .colBox h4{margin:0 0 10px; font-size:14px; letter-spacing:.08em; font-weight:900}
+    .colBox ul{margin:0; padding:0; list-style:none; display:grid; gap:8px;}
+    .colBox a{text-decoration:none; color:#6b5b4d; font-weight:800; font-size:13px; line-height:1.5}
+    .colBox a:hover{text-decoration:underline}
+
+    /* ====== LINK clinics ====== */
+    .linkList{margin:0; padding:0; list-style:none; display:grid; grid-template-columns: repeat(3, 1fr); gap:10px;}
+    .linkList a{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-radius: 16px;
+      border:1px solid rgba(233,222,211,.9); background:rgba(255,255,255,.72); text-decoration:none; font-weight:900;}
+    .linkList a span{color:#8c7c6f; font-weight:900}
+
+    /* ====== Footer ====== */
+    footer{background:#F9F8F4; border-top:2px solid var(--line); padding:40px 0 30px; margin-top:60px;}
+    .footTop{display:grid; grid-template-columns: 1.2fr 1fr; gap:18px; align-items:start;}
+    .footBrand{display:flex; gap:12px; align-items:center;}
+    .footBrand strong{letter-spacing:.06em; font-weight:900}
+    .footMeta{color:#8c7c6f; line-height:1.8; margin-top:10px}
+    .footCtas{display:flex; flex-direction:column; gap:12px; justify-content:flex-start; align-items:flex-start;}
+    .sitemap{margin-top:32px; padding-top:32px; border-top:1px solid rgba(233,222,211,.5); display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;}
+    .siteBox{padding:0; border:none; background:transparent;}
+    .siteBox h5{margin:0 0 14px; font-size:15px; letter-spacing:.05em; font-weight:700; color:var(--text);}
+    .siteBox ul{margin:0; padding:0; list-style:none; display:grid; gap:8px;}
+    .siteBox a{text-decoration:none; font-weight:600; color:#8c7c6f; font-size:13px; transition:color .2s;}
+    .siteBox a:hover{color:var(--text); text-decoration:underline}
+    .copyright{margin-top:32px; padding-top:24px; border-top:1px solid rgba(233,222,211,.5); color:#8c7c6f; font-size:12px; letter-spacing:.06em; text-align:center;}
+
+    /* ====== Floating buttons (mobile) ====== */
+    .fab{
+      position:fixed; right:14px; bottom:14px; z-index:60;
+      display:none; gap:10px;
+    }
+    .fab a{
+      display:flex; align-items:center; justify-content:center;
+      width:56px; height:56px; border-radius: 18px;
+      box-shadow: var(--shadow2);
+      border:1px solid rgba(233,222,211,.9);
+      text-decoration:none; font-weight:900;
+      backdrop-filter: blur(10px);
+    }
+    .fab a.web{background: linear-gradient(180deg, rgba(143,197,106,.95), rgba(123,191,87,.95)); color:#fff;}
+    .fab a.tel{background: rgba(255,255,255,.85); color:#6b5b4d;}
+    @media (max-width: 920px){
+      .fab{display:none !important;}
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 1040px){
+      .addr{display:none}
+      .brand{min-width:auto}
+      .columnGrid{grid-template-columns: repeat(3, 1fr)}
+      .linkList{grid-template-columns: repeat(2, 1fr)}
+      .medicalGrid{grid-template-columns: repeat(2, 1fr); gap:16px;}
+      .sitemap{grid-template-columns: repeat(2, 1fr)}
+      .section{padding:70px 0;}
+      .section + .section,
+      .section.alt + .section,
+      .section + .section.alt,
+      .section.alt + .section.alt{
+        padding-top:90px;
+      }
+    }
+    @media (max-width: 1024px){
+      .rightFloat{display:none;}
+      .reservationMenuBtn{display:flex;}
+    }
+    @media (max-width: 920px){
+      :root{ --hero-h: 85vh; }
+      .wrap{padding:0 16px;}
+      .topNav{display:none}
+      .hamburger{display:block}
+      .brand{min-width:auto; gap:10px;}
+      .brandText small{font-size:11px;}
+      .brandText strong{font-size:20px;}
+      .brandText .latin{font-size:11px;}
+      .h2{font-size:26px; margin:8px 0 16px;}
+      .hero{flex-direction:column; min-height:85vh; height:85vh;}
+      .heroSidebar{display:none;}
+      .heroMain{margin:10px; border-radius:24px;}
+      .heroInner{padding:40px 30px; justify-content:flex-start;}
+      .copyContainer{gap:24px; max-width:100%; margin-top:0;}
+      .copy{position:relative; z-index:4;}
+      .rightFloat{display:none;}
+      .reservationMenuBtn{display:flex; bottom:20px; right:20px; width:56px; height:56px; z-index:1001;}
+      .reservationMenuBtn svg{width:24px; height:24px;}
+      .reservationPopup{bottom:90px; right:20px; width:min(360px, calc(100vw - 40px));}
+      .hoursTable{display:none !important;}
+      .copy .headline{
+        font-family: var(--font);
+        text-align:left;
+      }
+      .copy .headline > span:first-child,
+      .copy .headline > span:nth-child(2){
+        display:block;
+        font-size:1.2rem;
+        font-weight:600;
+        color:#6F5E53;
+        letter-spacing:0.05em;
+        line-height:1.6;
+        margin-bottom:0.6rem;
+      }
+      .copy .headline > span:last-child{
+        display:block;
+        font-size:2.4rem;
+        font-weight:700;
+        color:#4A4A4A;
+        letter-spacing:0.04em;
+        line-height:1.4;
+        margin-top:0.9rem;
+      }
+      .copy .script{display:none;}
+      .copy::before,
+      .copy::after{display:none;}
+      .hours{display:none !important;}
+      .fab{display:none !important;}
+      .clinicGrid{grid-template-columns: 1fr; gap:16px;}
+      .greet{grid-template-columns: 1fr; gap:16px;}
+      .columnGrid{grid-template-columns: repeat(2, 1fr); gap:12px;}
+      .linkList{grid-template-columns: 1fr; gap:10px;}
+      .footTop{grid-template-columns: 1fr; gap:16px;}
+      .footCtas{justify-content:flex-start; flex-wrap:wrap; gap:10px;}
+      .fab{display:flex; right:16px; bottom:90px; z-index:1000;}
+      .section{padding:60px 0;}
+      .section + .section,
+      .section.alt + .section,
+      .section + .section.alt,
+      .section.alt + .section.alt{
+        padding-top:80px;
+      }
+      .medicalGrid{gap:14px;}
+      .mCard{min-height:220px;}
+      .mTitle{font-size:16px;}
+      .mDesc{font-size:13px;}
+      .featureList{grid-template-columns: 1fr;}
+      .feature{flex-direction:column; max-width:100%;}
+      .fThumb{height:85px; padding:10px 20px 14px;}
+      .fThumb .fNo{font-size:9px; margin-bottom:5px; font-weight:600;}
+      .fThumb .fTitle{font-size:18px; font-weight:700;}
+      .feature > div{padding:20px;}
+      .fText{font-size:13px;}
+      .card{padding:20px;}
+      .table{font-size:13px;}
+      .table th,
+      .table td{padding:10px 8px;}
+      .sub{font-size:14px; line-height:1.7;}
+      .newsItem{padding:12px 14px;}
+      .newsItem time{font-size:12px;}
+      .newsItem a{font-size:14px;}
+    }
+    @media (max-width: 560px){
+      :root{ --topbar-h: 88px; }
+      .wrap{padding:0 14px;}
+      .pillBtn{display:none}
+      .brand{min-width:auto; gap:8px;}
+      .brand img{width:42px !important; height:42px !important;}
+      .brandText{font-size:14px;}
+      .brandText small{font-size:10px; line-height:1.3;}
+      .brandText strong{font-size:16px; line-height:1.2;}
+      .brandText .latin{font-size:10px;}
+      .topbarInner{padding:10px 0; gap:10px;}
+      .h2{font-size:24px; margin:8px 0 14px;}
+      .kicker{font-size:11px;}
+      .hero{min-height:80vh; height:80vh;}
+      .heroMain{margin:8px; border-radius:16px;}
+      .heroInner{padding:24px 16px; justify-content:flex-start;}
+      .copyContainer{gap:16px; max-width:100%; margin-top:0;}
+      .copy{position:relative; z-index:4;}
+      .hoursTable{display:none !important;}
+      .copy .headline{
+        font-family: var(--font);
+        text-align:left;
+      }
+      .copy .headline > span:first-child,
+      .copy .headline > span:nth-child(2){
+        display:block;
+        font-size:1.15rem;
+        font-weight:600;
+        color:#6F5E53;
+        letter-spacing:0.05em;
+        line-height:1.6;
+        margin-bottom:0.5rem;
+      }
+      .copy .headline > span:last-child{
+        display:block;
+        font-size:2rem;
+        font-weight:700;
+        color:#4A4A4A;
+        letter-spacing:0.04em;
+        line-height:1.4;
+        margin-top:0.8rem;
+      }
+      .copy .script{display:none;}
+      .copy::before,
+      .copy::after{display:none;}
+      .rightFloat{display:none;}
+      .reservationMenuBtn{display:flex; bottom:14px; right:14px; width:52px; height:52px; z-index:1001;}
+      .reservationMenuBtn svg{width:22px; height:22px;}
+      .reservationPopup{bottom:75px; right:14px; width:calc(100vw - 28px); max-width:340px;}
+      .hours{display:none !important;}
+      .reservationPopup .badgeInfo{font-size:11px; padding:8px 12px; margin-bottom:12px;}
+      .reservationPopup .glassCard{padding:16px;}
+      .reservationPopup .cta{padding:12px;}
+      .reservationPopup .cta .txt strong{font-size:14px;}
+      .reservationPopup .cta .txt small{font-size:11px;}
+      .reservationPopup .mini{font-size:10px; padding:6px 8px;}
+      .hoursTable{padding:12px; margin-top:0; overflow-x:auto;}
+      .hoursTable table{min-width:280px;}
+      .hoursTable th,
+      .hoursTable td{padding:6px 4px; font-size:10px;}
+      .hoursTableMark{font-size:12px;}
+      .hours{width:calc(100vw - 28px); max-width:240px; font-size:12px;}
+      .hours .h{font-size:13px; padding:10px;}
+      .hours .b{font-size:11px; padding:8px 10px;}
+      .medicalGrid{grid-template-columns: 1fr; gap:12px;}
+      .section{padding:50px 0;}
+      .section + .section,
+      .section.alt + .section,
+      .section + .section.alt,
+      .section.alt + .section.alt{
+        padding-top:60px;
+      }
+      .mCard{min-height:180px; border-radius:18px;}
+      .mIcon{font-size:42px;}
+      .mThumb{height:110px;}
+      .mTitle{font-size:15px;}
+      .mDesc{font-size:12px; line-height:1.6;}
+      .featureList{grid-template-columns: 1fr;}
+      .feature{flex-direction:column; max-width:100%;}
+      .fThumb{height:75px; padding:8px 16px 12px;}
+      .fThumb .fNo{font-size:8px; margin-bottom:4px; font-weight:600;}
+      .fThumb .fTitle{font-size:16px; font-weight:700;}
+      .feature > div{padding:16px;}
+      .fText{font-size:12px; line-height:1.6;}
+      .clinicGrid{grid-template-columns: 1fr; gap:14px;}
+      .card{padding:18px;}
+      .table{font-size:12px;}
+      .table th,
+      .table td{padding:8px 6px; font-size:11px;}
+      .greet{grid-template-columns: 1fr; gap:14px;}
+      .doctorPhoto{aspect-ratio: 4/3;}
+      .greet h3{font-size:20px;}
+      .greet p{font-size:13px; line-height:1.7;}
+      .columnGrid{grid-template-columns: 1fr; gap:12px;}
+      .colBox{padding:12px; border-radius:18px;}
+      .colBox h4{font-size:13px; margin-bottom:8px;}
+      .colBox a{font-size:12px;}
+      .linkList{grid-template-columns: 1fr; gap:8px;}
+      .linkList a{padding:10px 12px; font-size:13px;}
+      .footTop{grid-template-columns: 1fr; gap:16px;}
+      .footBrand{gap:10px;}
+      .footBrand img{width:40px !important; height:40px !important;}
+      .footBrand strong{font-size:16px;}
+      .footMeta{font-size:12px; margin-top:8px;}
+      .footCtas{flex-direction:column; gap:8px;}
+      .footCtas .btn{width:100%; justify-content:center; padding:12px;}
+      .sitemap{grid-template-columns: 1fr; gap:12px;}
+      .siteBox{padding:12px; border-radius:18px;}
+      .siteBox h5{font-size:13px; margin-bottom:8px;}
+      .siteBox a{font-size:12px;}
+      .copyright{font-size:11px; margin-top:12px;}
+      .btn{padding:12px 18px; font-size:13px;}
+      .sub{font-size:13px; line-height:1.6; margin-bottom:16px;}
+      .newsItem{padding:10px 12px; gap:10px;}
+      .newsItem time{font-size:11px;}
+      .newsItem .tag{font-size:10px; padding:4px 8px;}
+      .newsItem a{font-size:13px;}
+      .newsWrap{gap:12px;}
+      .fab{right:14px; bottom:80px; gap:8px; z-index:1000;}
+      .fab a{width:50px; height:50px; font-size:20px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="topbarInner">
+        <button class="hamburger" type="button" aria-label="メニュー" id="openDrawer">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a class="brand" href="#top" style="text-decoration:none">
+          <img src="logo.png" alt="スマイルクリニック" style="width:54px; height:54px; object-fit:contain; background:transparent; display:block;">
+          <div class="brandText">
+            <small>石川の矯正歯科｜スマイルクリニック｜ネット予約可</small>
+            <strong>スマイルクリニック</strong>
+            <div class="latin">SMILE CLINIC</div>
+          </div>
+        </a>
+
+        <nav class="topNav" aria-label="グローバルナビ">
+          <a href="#top">ホーム</a>
+          <a href="#clinic">医院案内</a>
+          <a href="#medical">診療案内</a>
+          <a href="#price">料金表</a>
+          <a href="#access">アクセス</a>
+        </nav>
+
+        <div class="rightHead">
+          <button class="pillBtn green" type="button" onclick="window.open('https://plus.dentamap.jp/apl/netReserve/?_ga=2.199443278.1238787705.1640661992-594109607.1640661992', '_blank')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+              <path d="M16 2v4M8 2v4M3 10h18"></path>
+            </svg>
+                        WEB予約
+          </button>
+          <button class="pillBtn yellow" type="button" onclick="location.href='#reservation'">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4-7 4V5a2 2 0 0 1 2-2z"></path>
+            </svg>
+            予約変更
+          </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- ===== Mobile Drawer ===== -->
+  <div class="drawerBackdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="モバイルメニュー">
+    <div class="drawerHeader">
+      <strong>MENU</strong>
+      <button class="drawerClose" type="button" id="closeDrawer">×</button>
+    </div>
+    <div class="drawerCtas">
+      <button class="pillBtn green" type="button" style="width:100%; justify-content:center" onclick="window.open('https://plus.dentamap.jp/apl/netReserve/?_ga=2.199443278.1238787705.1640661992-594109607.1640661992', '_blank')">WEB予約</button>
+      <button class="pillBtn yellow" type="button" style="width:100%; justify-content:center" onclick="location.href='#reservation'">予約変更</button>
+      <a class="btn" href="tel:0722895261" style="justify-content:center">電話：072-289-5261</a>
+    </div>
+    <nav class="drawerNav">
+      <a href="#top">ホーム</a>
+      <a href="#clinic">医院案内</a>
+      <a href="#medical">診療案内</a>
+      <a href="#price">料金表</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </aside>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-label="ファーストビュー">
+      <!-- 左サイドバー -->
+      <div class="heroSidebar">
+        <div class="heroSidebarText">SMILE CLINIC<br>EST.2022</div>
+        <div class="heroSidebarScroll">
+          <div class="heroSidebarScrollText">SCROLL</div>
+          <div class="heroSidebarScrollLine"></div>
+        </div>
+            </div>
+      
+      <!-- メインビジュアルエリア -->
+      <div class="heroMain">
+        <!-- 人物写真 -->
+        <div class="heroPhoto">
+        <img src="firstview.jpg" alt="自然な笑顔">
+            </div>
+
+        <!-- グラデーションマスク -->
+        <div class="heroGradient"></div>
+
+        <!-- コンテンツ（写真の上に配置） -->
+      <div class="heroInner">
+        <div class="copyContainer">
+          <div class="copy">
+            <div class="headline">
+              <span>きれいな歯ならび</span>
+              <span>機能的なかみ合わせ</span>
+              <span>自然な笑顔で毎日を</span>
+            </div>
+            <div class="script">smile</div>
+        </div>
+          
+          <!-- 診療時間表 -->
+          <div class="hoursTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:30 - 13:30</td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">/</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">★</span></td>
+                  <td><span class="hoursTableMark">★</span></td>
+                </tr>
+                <tr>
+                  <td>15:00 - 19:30</td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">/</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">●</span></td>
+                  <td><span class="hoursTableMark">★</span></td>
+                  <td><span class="hoursTableMark">★</span></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        </div>
+
+        <!-- デスクトップ表示用の予約メニュー -->
+        <div class="rightFloat" id="rightFloatDesktop">
+          <div class="badgeInfo">
+            Web予約<br>24時間受付中
+            </div>
+
+          <div class="glassCard">
+            <div class="stack">
+              <a class="cta g1" href="#web" aria-label="WEB予約">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+                      <path d="M16 2v4M8 2v4M3 10h18"></path>
+                </svg>
+            </div>
+                  <div class="txt">
+                    <strong>WEB予約</strong>
+                    <small>詳しくはこちら</small>
+            </div>
+        </div>
+                <span class="mini">無料相談 受付中</span>
+              </a>
+
+              <a class="cta g2" href="#reservation" aria-label="予約変更">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                      <path d="M8 10h8M8 14h5"></path>
+                </svg>
+        </div>
+                  <div class="txt">
+                    <strong>予約変更</strong>
+                    <small>詳しくはこちら</small>
+                    </div>
+                    </div>
+                <span class="mini">ログイン</span>
+              </a>
+
+              <a class="cta g3" href="#price" aria-label="料金表">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1v22"></path>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                    </div>
+                  <div class="txt">
+                    <strong>料金表</strong>
+                    <small>詳しくはこちら</small>
+                    </div>
+            </div>
+                <span class="mini">一覧</span>
+              </a>
+
+              <a class="cta g4" href="#medical" aria-label="症状から探す">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a10 10 0 1 0 10 10"></path>
+                      <path d="M12 12l6 6"></path>
+                      <path d="M12 12a4 4 0 1 0-4-4"></path>
+                    </svg>
+            </div>
+                  <div class="txt">
+                    <strong>症状から探す</strong>
+                    <small>詳しくはこちら</small>
+                    </div>
+                        </div>
+                <span class="mini">検索</span>
+                </a>
+                    </div>
+                </div>
+                    </div>
+        </div>
+        </div>
+
+        <!-- モバイル/タブレット用のメニューボタンとポップアップ -->
+        <button class="reservationMenuBtn" id="reservationMenuBtn" aria-label="予約メニューを開く">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+            <path d="M16 2v4M8 2v4M3 10h18"></path>
+          </svg>
+        </button>
+
+        <div class="reservationPopup" id="reservationPopup">
+          <div class="reservationPopupContent">
+          <div class="badgeInfo">
+            Web予約<br>24時間受付中
+            </div>
+            <button class="reservationPopupClose" id="reservationPopupClose" aria-label="閉じる">×</button>
+          <div class="glassCard">
+            <div class="stack">
+              <a class="cta g1" href="#web" aria-label="WEB予約">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+                      <path d="M16 2v4M8 2v4M3 10h18"></path>
+                    </svg>
+                    </div>
+                  <div class="txt">
+                    <strong>WEB予約</strong>
+                    <small>詳しくはこちら</small>
+                    </div>
+                </div>
+                <span class="mini">無料相談 受付中</span>
+              </a>
+
+              <a class="cta g2" href="#reservation" aria-label="予約変更">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                      <path d="M8 10h8M8 14h5"></path>
+                    </svg>
+                </div>
+                  <div class="txt">
+                    <strong>予約変更</strong>
+                    <small>詳しくはこちら</small>
+            </div>
+        </div>
+                <span class="mini">ログイン</span>
+              </a>
+
+              <a class="cta g3" href="#price" aria-label="料金表">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 1v22"></path>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+            </div>
+                  <div class="txt">
+                    <strong>料金表</strong>
+                    <small>詳しくはこちら</small>
+            </div>
+        </div>
+                <span class="mini">一覧</span>
+              </a>
+
+              <a class="cta g4" href="#medical" aria-label="症状から探す">
+                <div class="left">
+                  <div class="ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a10 10 0 1 0 10 10"></path>
+                      <path d="M12 12l6 6"></path>
+                      <path d="M12 12a4 4 0 1 0-4-4"></path>
+                    </svg>
+            </div>
+                  <div class="txt">
+                    <strong>症状から探す</strong>
+                    <small>詳しくはこちら</small>
+                    </div>
+                        </div>
+                <span class="mini">検索</span>
+                </a>
+                    </div>
+                </div>
+          </div>
+          <div class="reservationPopupBackdrop" id="reservationPopupBackdrop"></div>
+                    </div>
+                        </div>
+
+      <div class="decor" aria-hidden="true">
+        <div class="flower bl"></div>
+        <div class="flower br"></div>
+                    </div>
+
+      <!-- ふわっと桜の花びら -->
+      <div class="petals" aria-hidden="true">
+        <span class="petal" style="--rotate: 25deg; --scale: 0.9"></span>
+        <span class="petal" style="--rotate: -15deg; --scale: 1.1"></span>
+        <span class="petal" style="--rotate: 35deg; --scale: 0.85"></span>
+        <span class="petal" style="--rotate: -25deg; --scale: 1.05"></span>
+        <span class="petal" style="--rotate: 20deg; --scale: 0.95"></span>
+        <span class="petal" style="--rotate: -30deg; --scale: 1.0"></span>
+                    </div>
+
+      <div class="hours" role="note" aria-label="本日の診療時間" id="hoursWidget">
+        <div class="h">本日の診療時間 <span class="x" id="closeHours">×</span></div>
+        <div class="b">本日は休診日です</div>
+                        </div>
+    </section>
+
+    <!-- ===== NEWS ===== -->
+    <section class="section alt" id="news">
+      <div class="wrap">
+        <div class="kicker">NEWS</div>
+        <div class="h2">お知らせ</div>
+        <div class="newsWrap">
+          <ul class="newsList">
+            <li class="newsItem">
+              <time datetime="2025-12-22">2025.12.22</time>
+              <span class="tag">お知らせ</span>
+              <a href="#">医療コラム更新</a>
+                </li>
+            <li class="newsItem">
+              <time datetime="2025-12-15">2025.12.15</time>
+              <span class="tag">お知らせ</span>
+              <a href="#">～年末年始の休診について～</a>
+                </li>
+            <li class="newsItem">
+              <time datetime="2025-12-15">2025.12.15</time>
+              <span class="tag">お知らせ</span>
+              <a href="#">医療コラム更新</a>
+                </li>
+            </ul>
+          <a class="btn" href="#">一覧</a>
+                    </div>
+                </div>
+    </section>
+
+    <!-- ===== CLINIC ===== -->
+    <section class="section" id="clinic">
+      <div class="wrap">
+        <div class="kicker">CLINIC</div>
+        <div class="h2">医院情報</div>
+        <div class="clinicGrid">
+          <div class="card">
+            <div class="infoLine"><span class="circle">〒</span><div>石川県金沢市（住所を入力）<br><a href="#access">アクセスはこちら</a></div></div>
+            <div class="phone">072-289-5261</div>
+            <div class="sns">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="LINE">LINE</a>
+                    </div>
+                        </div>
+
+          <div class="card">
+            <table class="table" aria-label="診療時間">
+                        <thead>
+                <tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+                        </thead>
+                        <tbody>
+                <tr><th>10:30 - 13:30</th><td>●</td><td>／</td><td>●</td><td>●</td><td>●</td><td>★</td><td>★</td></tr>
+                <tr><th>15:00 - 19:30</th><td>●</td><td>／</td><td>●</td><td>●</td><td>●</td><td>★</td><td>★</td></tr>
+                        </tbody>
+                    </table>
+            <p class="sub" style="margin:12px 0 0">
+              休診日：火曜、水曜(第1･3)、木曜(第2･4)、日曜(第2･4)<br>
+              ※休診日は月ごとに多少の変動がございますので、診療カレンダーをご覧ください。<br>
+              ★…午前9:30-13:00／午後14:30-18:00
+            </p>
+                    </div>
+                </div>
+                    </div>
+    </section>
+
+    <!-- ===== CALENDAR ===== -->
+    <section class="section alt" id="calendar">
+      <div class="wrap">
+        <div class="kicker">CALENDAR</div>
+        <div class="h2">診療カレンダー</div>
+        <p class="calendarNotice">
+          現在Safariにて下記カレンダー表示に不具合が出ている場合がございます。<br>
+          Safariでカレンダーを開けない方は、Google Chrome等他のブラウザで開いてください。
+        </p>
+        <div class="calendarBox" aria-label="Googleカレンダー">
+          <!-- 実サイトはGoogleカレンダーを表示。ここはサンプルの埋め込み枠です。URLは必要に応じて差し替えてください。 -->
+          <iframe title="診療カレンダー" src="https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com&ctz=Asia%2FTokyo" width="100%" height="540" loading="lazy"></iframe>
+                        </div>
+                    </div>
+    </section>
+
+    <!-- ===== FEATURE ===== -->
+    <section class="section" id="feature">
+      <div class="wrap">
+        <div class="kicker">FEATURE</div>
+        <div class="h2">当院の特徴</div>
+        <div class="featureList">
+          <article class="feature">
+            <div class="fThumb" aria-hidden="true">
+              <div class="fNo">FEATURE 01</div>
+              <div class="fTitle">バリエーション豊かな治療方法</div>
+            </div>
+            <div>
+              <p class="fText">マウスピース型矯正装置や舌側矯正など、さまざまな治療方法をご用意。目立ちにくい装置も取り扱っています。</p>
+              <div class="fLinks">
+                <a class="btn" href="#">マウスピース矯正</a>
+                <a class="btn" href="#">舌側矯正</a>
+                </div>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="fThumb" aria-hidden="true" style="background:linear-gradient(135deg, rgba(217,176,176,.25), rgba(143,197,106,.18));">
+              <div class="fNo">FEATURE 02</div>
+              <div class="fTitle">矯正歯科専門医院による矯正治療</div>
+            </div>
+            <div>
+              <p class="fText">矯正治療を専門的にご提供。矯正歯科を専門とする歯科医師が常駐し、患者さんに寄り添った治療環境づくりに努めています。</p>
+              <div class="fLinks">
+                <a class="btn" href="#">大人の矯正</a>
+                <a class="btn" href="#">子どもの矯正</a>
+        </div>
+                    </div>
+          </article>
+
+          <article class="feature">
+            <div class="fThumb" aria-hidden="true" style="background:linear-gradient(135deg, rgba(240,196,91,.28), rgba(183,168,156,.18));">
+              <div class="fNo">FEATURE 03</div>
+              <div class="fTitle">光学3Dスキャナーによる治療</div>
+            </div>
+            <div>
+              <p class="fText">スティック状のカメラでお口の中を撮影し、型取りの負担を軽減。デジタル画像で状態確認や簡易シミュレーションも行えます。</p>
+              <div class="fLinks">
+                <a class="btn" href="#">口腔内スキャナー</a>
+                <a class="btn" href="#">シミュレーション例</a>
+            </div>
+                    </div>
+          </article>
+
+          <article class="feature">
+            <div class="fThumb" aria-hidden="true" style="background:linear-gradient(135deg, rgba(143,197,106,.24), rgba(217,176,176,.22));">
+              <div class="fNo">FEATURE 04</div>
+              <div class="fTitle">丁寧なカウンセリング</div>
+            </div>
+            <div>
+              <p class="fText">専門スタッフが悩みを丁寧にヒアリング。ライフスタイルを考慮し、複数の選択肢から適切な治療方法をご提案します。</p>
+              <div class="fLinks">
+                <a class="btn" href="#first" id="first">初めてご来院の方へ</a>
+                    </div>
+                    </div>
+          </article>
+
+          <article class="feature">
+            <div class="fThumb" aria-hidden="true" style="background:linear-gradient(135deg, rgba(199,151,87,.22), rgba(240,196,91,.20));">
+              <div class="fNo">FEATURE 05</div>
+              <div class="fTitle">わかりやすい料金と通いやすい診療時間</div>
+            </div>
+            <div>
+              <p class="fText">治療開始前に費用をご説明。土日も診療、平日は夜19:30まで。忙しい方でも通いやすい体制です。</p>
+              <div class="fLinks">
+                <a class="btn" href="#price">料金表</a>
+                <a class="btn" href="#clinic">診療時間</a>
+                    </div>
+                    </div>
+          </article>
+                    </div>
+                    </div>
+    </section>
+
+    <!-- ===== MEDICAL ===== -->
+    <section class="section alt" id="medical">
+      <div class="wrap">
+        <div class="kicker">MEDICAL</div>
+        <div class="h2">診療案内</div>
+        <p class="sub">年齢やご希望に合わせて、矯正治療を幅広くご提案します。</p>
+
+        <div class="medicalGrid">
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">🦷</span></div>
+            <div class="mBody">
+              <p class="mTitle">大人の矯正</p>
+              <p class="mDesc">装置の種類やライフスタイルに合わせて、無理のない矯正プランをご提案します。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">👶</span></div>
+            <div class="mBody">
+              <p class="mTitle">子どもの矯正</p>
+              <p class="mDesc">成長段階に合わせた治療で、歯ならびと噛み合わせの土台づくりをサポート。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">⚙️</span></div>
+            <div class="mBody">
+              <p class="mTitle">ワイヤー矯正</p>
+              <p class="mDesc">幅広い症例に対応。歯の動きをコントロールしやすい治療方法です。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">💎</span></div>
+            <div class="mBody">
+              <p class="mTitle">マウスピース型矯正装置</p>
+              <p class="mDesc">透明で目立ちにくく、取り外し可能。日常生活への負担を軽減します。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">📍</span></div>
+            <div class="mBody">
+              <p class="mTitle">舌側矯正</p>
+              <p class="mDesc">歯の裏側に装置を付けるため、見た目が気になる方におすすめです。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">🔩</span></div>
+            <div class="mBody">
+              <p class="mTitle">アンカースクリュー</p>
+              <p class="mDesc">固定源を強化し、より精密な歯の移動を目指す治療オプションです。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">✂️</span></div>
+            <div class="mBody">
+              <p class="mTitle">部分矯正</p>
+              <p class="mDesc">前歯など気になる部分だけを整えたい方に。適応は検査で判断します。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">📐</span></div>
+            <div class="mBody">
+              <p class="mTitle">咬合誘導装置</p>
+              <p class="mDesc">お子さんの成長に合わせて、顎の発育と噛み合わせを導く装置です。</p>
+                    </div>
+                </a>
+
+          <a class="mCard" href="#">
+            <div class="mThumb"><span class="mIcon">💪</span></div>
+            <div class="mBody">
+              <p class="mTitle">口腔筋機能療法（MFT）</p>
+              <p class="mDesc">舌や唇などお口まわりの筋肉バランスを整え、後戻り予防にもつなげます。</p>
+                    </div>
+                </a>
+                    </div>
+
+        <div style="margin-top:18px; display:flex; flex-wrap:wrap; gap:8px" id="price">
+          <a class="btn" href="#" style="font-size:11px; padding:6px 12px; white-space:nowrap;">料金表</a>
+          <a class="btn" href="#" style="font-size:11px; padding:6px 12px; white-space:nowrap;">矯正治療にともなうリスクと副作用</a>
+          <a class="btn" href="#" style="font-size:11px; padding:6px 12px; white-space:nowrap;">症例集</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GREETING ===== -->
+    <section class="section" id="doctor">
+      <div class="wrap">
+        <div class="kicker">GREETING</div>
+        <div class="h2">ごあいさつ</div>
+        <div class="greet">
+          <div class="doctorPhoto" aria-label="院長写真"></div>
+          <div class="card soft">
+            <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center">
+              <div>
+                <div class="kicker" style="margin-top:4px">スマイルクリニック</div>
+                <h3>院長（名前を入力）</h3>
+            </div>
+              <span class="badge">日本矯正歯科学会 認定医</span>
+                </div>
+            <p>
+              当院は矯正治療専門の歯科医院として石川県に開院いたしました。<br>
+              エビデンスに基づいた治療提供に加え、顎の動きや噛み合わせ、呼吸や舌の位置など、機能性まで考慮した歯ならびの完成を目指します。<br>
+              写真や3D画像などを用いて状態をわかりやすくお伝えし、安心できる治療を提供することを大切にしています。
+            </p>
+            <div style="margin-top:14px">
+              <a class="btn" href="#">院長あいさつ・経歴紹介</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COLUMN ===== -->
+    <section class="section alt" id="column" style="display:none;">
+      <div class="wrap">
+        <div class="kicker">COLUMN</div>
+        <div class="h2">医療コラム</div>
+        <p class="sub">カテゴリ別の最新記事（例）を掲載しています。</p>
+
+        <div class="columnGrid">
+          <div class="colBox">
+            <h4>お知らせ</h4>
+            <ul>
+                        <li><a href="#">虫歯について🤧</a></li>
+                        <li><a href="#">MIHってなに？</a></li>
+                        <li><a href="#">抜髄ってなに？</a></li>
+                    </ul>
+                </div>
+          <div class="colBox">
+            <h4>矯正歯科</h4>
+            <ul>
+                        <li><a href="#">小児のマウスピース矯正とは</a></li>
+                        <li><a href="#">生活習慣による歯ならびへの影響</a></li>
+                        <li><a href="#">いつになる？子供の矯正の開始タイミング👆</a></li>
+                    </ul>
+                </div>
+          <div class="colBox">
+            <h4>歯科知識</h4>
+            <ul>
+                        <li><a href="#">虫歯について🤧</a></li>
+                        <li><a href="#">MIHってなに？</a></li>
+                        <li><a href="#">抜髄ってなに？</a></li>
+                    </ul>
+                </div>
+          <div class="colBox">
+            <h4>予防・メインテナンス</h4>
+            <ul>
+              <li><a href="#">歯の磨き方について🦷</a></li>
+                        <li><a href="#">フッ素(フッ化物)ってなに？</a></li>
+                        <li><a href="#">矯正治療中のお食事について🍽</a></li>
+                    </ul>
+                </div>
+          <div class="colBox">
+            <h4>ホワイトニング</h4>
+            <ul>
+                        <li><a href="#">子どもってホワイトニングできるの？</a></li>
+                        <li><a href="#">ホワイトニングについて②</a></li>
+              <li><a href="#">ホワイトニングについて その①</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACCESS ===== -->
+    <section class="section" id="access">
+      <div class="wrap">
+        <div class="kicker">ACCESS</div>
+        <div class="h2">アクセス</div>
+        <div class="grid" style="grid-template-columns: 1.1fr .9fr; align-items:start" class="accessGrid">
+          <div class="card">
+            <div class="infoLine"><span class="circle">📍</span><div>石川県金沢市（住所を入力）</div></div>
+            <div class="infoLine" style="margin-top:10px"><span class="circle">🚃</span><div>最寄り駅 徒歩1分</div></div>
+            <div class="infoLine" style="margin-top:10px"><span class="circle">☎</span><div><a href="tel:0722895261">072-289-5261</a></div></div>
+            <div style="margin-top:14px">
+              <a class="btn" href="#">Google Mapで見る</a>
+    </div>
+          </div>
+          <div class="card" style="padding:0; overflow:hidden">
+            <!-- 地図は必要に応じて差し替え可能 -->
+            <iframe title="地図" src="https://www.google.com/maps?q=%E5%A0%BA%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%B3%B3%E6%9D%B1%E7%94%BA1%E4%B8%814%E7%95%AA%E5%9C%B031&output=embed" width="100%" height="340" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA Section ===== -->
+    <section class="section alt" style="background:linear-gradient(135deg, rgba(143,197,106,.12), rgba(240,196,91,.08));">
+      <div class="wrap" style="text-align:center;">
+        <div class="h2" style="margin-bottom:24px;">まずはお気軽にご相談ください</div>
+        <p class="sub" style="margin-bottom:32px; max-width:600px; margin-left:auto; margin-right:auto;">無料相談も承っております。お気軽にお問い合わせください。</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a class="pillBtn green" href="#web" onclick="window.open('https://plus.dentamap.jp/apl/netReserve/?_ga=2.199443278.1238787705.1640661992-594109607.1640661992', '_blank'); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+              <path d="M16 2v4M8 2v4M3 10h18"></path>
+            </svg>
+            WEB予約
+          </a>
+          <a class="pillBtn yellow" href="tel:0722895261">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            電話予約
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reservation helper anchors ===== -->
+    <div id="web" style="position:relative; top:-110px"></div>
+    <div id="reservation" style="position:relative; top:-110px"></div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="footTop">
+        <div>
+          <div class="footBrand">
+            <img src="logo.png" alt="スマイルクリニック" style="width:46px; height:46px; object-fit:contain; background:transparent;">
+            <div>
+              <strong>スマイルクリニック</strong>
+              <div class="footMeta">石川県金沢市（住所を入力）<br>072-289-5261</div>
+                    </div>
+                </div>
+                </div>
+        <div class="footCtas">
+          <a class="pillBtn green" href="#web" onclick="window.open('https://plus.dentamap.jp/apl/netReserve/?_ga=2.199443278.1238787705.1640661992-594109607.1640661992', '_blank'); return false;" style="width:100%; justify-content:center; max-width:300px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+              <path d="M16 2v4M8 2v4M3 10h18"></path>
+            </svg>
+            WEB予約
+          </a>
+          <a class="btn" href="tel:0722895261" style="width:100%; justify-content:center; max-width:300px;">電話：072-289-5261</a>
+            </div>
+      </div>
+
+      <div class="sitemap" aria-label="サイトマップ">
+        <div class="siteBox">
+          <h5>サイト</h5>
+          <ul>
+            <li><a href="#top">ホーム</a></li>
+            <li><a href="#clinic">医院案内</a></li>
+            <li><a href="#doctor">医師紹介</a></li>
+            <li><a href="#news">お知らせ</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#reservation">ご予約変更の流れ</a></li>
+            <li><a href="#">キャンセルポリシー</a></li>
+            <li><a href="#first">初めてご来院の方へ</a></li>
+                    </ul>
+                </div>
+        <div class="siteBox">
+          <h5>診療内容</h5>
+          <ul>
+            <li><a href="#">大人の矯正</a></li>
+            <li><a href="#">子どもの矯正</a></li>
+            <li><a href="#">ワイヤー矯正</a></li>
+            <li><a href="#">マウスピース型矯正装置</a></li>
+            <li><a href="#">舌側矯正</a></li>
+            <li><a href="#">歯科矯正用アンカースクリュー</a></li>
+            <li><a href="#">部分矯正</a></li>
+            <li><a href="#">歯列矯正用咬合誘導装置</a></li>
+            <li><a href="#">口腔筋機能療法（MFT）</a></li>
+            <li><a href="#">歯科と食育</a></li>
+            <li><a href="#">保定について</a></li>
+            <li><a href="#">よくいただく質問</a></li>
+            <li><a href="#">リスクと副作用</a></li>
+            <li><a href="#">症例集</a></li>
+                    </ul>
+                </div>
+        <div class="siteBox">
+          <h5>医療コラム</h5>
+          <ul>
+            <li><a href="#column">お知らせ</a></li>
+            <li><a href="#column">矯正歯科</a></li>
+            <li><a href="#column">歯科知識</a></li>
+            <li><a href="#column">予防・メインテナンス</a></li>
+            <li><a href="#column">ホワイトニング</a></li>
+          </ul>
+            </div>
+        </div>
+
+      <div class="copyright">© 石川県 矯正歯科専門医院 スマイルクリニック</div>
+        </div>
+    </footer>
+
+  <!-- Floating buttons (mobile) -->
+  <div class="fab" aria-label="クイックアクション">
+    <a class="tel" href="tel:0722895261" aria-label="電話">☎</a>
+    <a class="web" href="#web" aria-label="WEB予約" onclick="window.open('https://plus.dentamap.jp/apl/netReserve/?_ga=2.199443278.1238787705.1640661992-594109607.1640661992', '_blank'); return false;">🗓</a>
+  </div>
+
+  <script>
+    // Simple drawer
+    const drawer = document.getElementById('drawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const openBtn = document.getElementById('openDrawer');
+    const closeBtn = document.getElementById('closeDrawer');
+
+    function openDrawer(){
+      drawer.style.transform = 'translateX(0)';
+      backdrop.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+      drawer.style.transform = 'translateX(-105%)';
+      backdrop.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    if(openBtn){ openBtn.addEventListener('click', openDrawer); }
+    if(closeBtn){ closeBtn.addEventListener('click', closeDrawer); }
+    if(backdrop){ backdrop.addEventListener('click', closeDrawer); }
+
+    // hours widget close
+    const closeHours = document.getElementById('closeHours');
+    const hoursWidget = document.getElementById('hoursWidget');
+    if(closeHours && hoursWidget){
+      closeHours.addEventListener('click', ()=>{ hoursWidget.style.display='none'; });
+    }
+
+    // 予約メニューポップアップの開閉
+    const reservationMenuBtn = document.getElementById('reservationMenuBtn');
+    const reservationPopup = document.getElementById('reservationPopup');
+    const reservationPopupClose = document.getElementById('reservationPopupClose');
+    const reservationPopupBackdrop = document.getElementById('reservationPopupBackdrop');
+
+    function openReservationPopup(){
+      if(reservationPopup){
+        reservationPopup.classList.add('active');
+      }
+    }
+    function closeReservationPopup(){
+      if(reservationPopup){
+        reservationPopup.classList.remove('active');
+      }
+    }
+
+    if(reservationMenuBtn){
+      reservationMenuBtn.addEventListener('click', openReservationPopup);
+    }
+    if(reservationPopupClose){
+      reservationPopupClose.addEventListener('click', closeReservationPopup);
+    }
+    if(reservationPopupBackdrop){
+      reservationPopupBackdrop.addEventListener('click', closeReservationPopup);
+    }
+
+    // auto close drawer after click
+    document.querySelectorAll('.drawerNav a').forEach(a=>{
+      a.addEventListener('click', closeDrawer);
+    });
+
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero');
+    const heroPhoto = document.querySelector('.heroPhoto');
+    const flowers = document.querySelectorAll('.flower');
+    const petals = document.querySelectorAll('.petal');
+    const particles = document.querySelectorAll('.particle');
+    
+    if(hero && window.innerWidth > 768){
+      let ticking = false;
+      
+      function updateParallax(){
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+        const heroTop = hero.offsetTop;
+        
+        if(scrolled < heroTop + heroHeight){
+          // 人物写真: ゆっくり動く（奥）
+          if(heroPhoto){
+            const photoOffset = scrolled * 0.3;
+            heroPhoto.style.transform = `translateY(${photoOffset}px)`;
+          }
+          
+          // 花の装飾: 中程度の速度
+          flowers.forEach((flower, index)=>{
+            const speed = index === 0 ? 0.5 : 0.4;
+            const offset = scrolled * speed;
+            const currentTransform = flower.style.transform || '';
+            const rotate = currentTransform.match(/rotate\([^)]+\)/);
+            flower.style.transform = `translateY(${offset}px) ${rotate ? rotate[0] : ''}`;
+          });
+          
+          // 花びら: 速く動く（手前）
+          petals.forEach((petal, index)=>{
+            const speed = 0.8 + (index * 0.1);
+            const offset = scrolled * speed;
+            const currentTransform = petal.style.transform || '';
+            const rotate = currentTransform.match(/rotate\([^)]+\)/);
+            petal.style.transform = `translateY(${offset}px) ${rotate ? rotate[0] : ''}`;
+          });
+          
+          // 装飾パーツ: 異なる速度でパララックス（手前と奥で速度差）
+          particles.forEach((particle, index)=>{
+            const speeds = [0.6, 0.4, 0.7]; // 手前と奥で異なる速度（3つに削減）
+            const speed = speeds[index] || 0.5;
+            const offset = scrolled * speed;
+            const currentTransform = particle.style.transform || '';
+            const scale = currentTransform.match(/scale\([^)]+\)/);
+            particle.style.transform = `translateY(${offset}px) ${scale ? scale[0] : ''}`;
+          });
+        }
+        
+        ticking = false;
+      }
+      
+      function requestTick(){
+        if(!ticking){
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }
+      
+      window.addEventListener('scroll', requestTick);
+    }
+  </script>
+
+  <!--
+    仕上げ（完全一致に寄せる場合）
+    - 実サイトの画像を使う場合：.heroMedia / .doctorPhoto / .fThumb などを background-image に差し替え
+    - NEWS/コラム記事はCMS連携のため、この静的版では「例」のテキストになっています
+    - Googleカレンダーのiframeは実サイトの埋め込みURLに差し替えてください
+  -->
+</body>
+</html>
